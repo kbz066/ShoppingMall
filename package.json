@@ -1,0 +1,26 @@
+{
+  "name": "ShoppingMall",
+  "version": "1.0.0",
+  "description": "商城前端",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbz066/ShoppingMall.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbz066/ShoppingMall/issues"
+  },
+  "homepage": "https://github.com/kbz066/ShoppingMall#readme",
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {}
+}
