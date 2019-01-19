@@ -1,3 +1,4 @@
-var jq =require("jquery");
-console.log(jq("body") ,"++++++++++++   ");
-jq("body").html("1111111111111111111111111111111111");
+import css from '../index/app.css';
+import yy from "../index/yinyong"
+console.log(css);
+
