@@ -1,4 +1,12 @@
-import css from '../index/app.css';
-import yy from "../index/yinyong"
-console.log(css);
+
+
+import _mm from "util/mm.js";
+
+_mm.request({
+    url : "www.baidu.com"
+
+});
+// console.log($);
+
+
 

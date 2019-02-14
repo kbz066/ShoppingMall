@@ -13,7 +13,7 @@ module.exports = {
   output: {
     filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
-    
+
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -47,7 +47,6 @@ module.exports = {
           name: "commons"
         },
 
-
       }
     }
   },
@@ -61,21 +60,22 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
-              name: 'images/[name].[ext]',
-        
-              publicPath:"/dist" 
+              name: '[name].[ext]',
+              limit: 10,
+              outputPath : "images",
+              publicPath: "../images"
             }
           }
-          
+
         ]
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/page/index/index.html",
+      template: "src/view/index.html",
       filename: 'html/index.html',
     }),
     new MiniCssExtractPlugin({//实例MiniCssExtractPlugin
@@ -84,5 +84,14 @@ module.exports = {
       filename: 'css/[name].css',
       chunkFilename: '[id].css',
     })
-  ]
+  ],
+  // Webpack alias 配置
+  resolve: {
+    alias: {
+      util: path.resolve(__dirname, 'src/util/'),
+      page: path.resolve(__dirname, 'src/page/'),
+      service: path.resolve(__dirname, 'src/service/'),
+      image: path.resolve(__dirname, 'src/image/'),
+    }
+  }
 };
